@@ -1,0 +1,51 @@
+## 
+# SixArm gitignore file
+#
+# We use this gitignore file as a starter file for our projects.
+# We tyipcally add many more items here depending on the project.
+##
+ 
+##
+# Dot files
+#
+# Ignore dot files, a.k.a. hidden files, by default
+# then accept specific files and patterns.
+##
+
+.*
+!.gitignore
+!.*.gitignore
+!.*[-_.]example
+!.*[-_.]example[-_.]*
+!.*.gpg
+!.*.pgp
+
+## 
+# Environment files
+#
+# Ignore environment files, a.k.a. export files, by default,
+# then accept specific files and patterns.
+##
+
+env
+env[-_.]*
+!env[-_.]example
+!env[-_.]example[-_.]*
+!env[-_.]gpg
+!env[-_.]pgp
+!env[-_.]*.gpg
+!env[-_.]*.pgp
+
+##
+# Artifact directories 
+#
+# Ignore artifact directories, a.k.a. temporary file folders,
+# using typical naming conventions from many technologies.
+##
+
+/**/build
+/**/cache
+/**/log
+/**/target
+/**/tmp
+/**/vendor
