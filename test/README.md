@@ -16,7 +16,17 @@ Steps:
 
 2. The script saves results into the `results` directory, so you can take a look.
 
-3. The script compares various outputs by using `diff $actual $expect`.
+3. The script calculates various outputs by using `diff $actual $expect`.
+
+
+## Commands
+
+The outputs are essentially based on these two commands:
+
+```sh
+git check-ignore -v
+git status --ignored 
+```
 
 
 ## Example directory structure
