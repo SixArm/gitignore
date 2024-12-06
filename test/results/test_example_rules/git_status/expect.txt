@@ -85,4 +85,24 @@ Changes to be committed:
 	new file:   foo_example_goo
 	new file:   foo_examples
 	new file:   foo_examples_goo
+	new file:   subdir/example-foo/foo
+	new file:   subdir/example.foo/foo
+	new file:   subdir/example/foo
+	new file:   subdir/example_foo/foo
+	new file:   subdir/examples-foo/foo
+	new file:   subdir/examples.foo/foo
+	new file:   subdir/examples/foo
+	new file:   subdir/examples_foo/foo
+	new file:   subdir/foo-example-goo/foo
+	new file:   subdir/foo-example/foo
+	new file:   subdir/foo-examples-goo/foo
+	new file:   subdir/foo-examples/foo
+	new file:   subdir/foo.example.goo/foo
+	new file:   subdir/foo.example/foo
+	new file:   subdir/foo.examples.goo/foo
+	new file:   subdir/foo.examples/foo
+	new file:   subdir/foo_example/foo
+	new file:   subdir/foo_example_goo/foo
+	new file:   subdir/foo_examples/foo
+	new file:   subdir/foo_examples_goo/foo
 

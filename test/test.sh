@@ -80,6 +80,7 @@ test_keep_rules() {
 test_env_rules() {
     setup
     mkdir dir
+    mkdir subdir
     for x in \
         env \
         env.example \
@@ -93,6 +94,8 @@ test_env_rules() {
         touch "$x"
         touch "dir/.$x"
         touch "dir/$x"
+        mkdir "subdir/$x"
+        touch "subdir/$x/foo"
     done
     assert "test_env_rules"
 }
@@ -100,6 +103,7 @@ test_env_rules() {
 test_example_rules() {
     setup
     mkdir dir
+    mkdir subdir
     for x in \
         example \
         example.foo \
@@ -126,6 +130,8 @@ test_example_rules() {
         touch "$x"
         touch "dir/.$x"
         touch "dir/$x"
+        mkdir "subdir/$x"
+        touch "subdir/$x/foo"
     done
     assert "test_example_rules"
 }

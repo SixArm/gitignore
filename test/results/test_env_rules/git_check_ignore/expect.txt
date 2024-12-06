@@ -8,9 +8,17 @@
 .env[-_.]*	dir/.env_foo
 env	dir/env
 env	env
+env	subdir/env
+env	subdir/env/foo
 env[-_.]*	dir/env-foo
 env[-_.]*	dir/env.foo
 env[-_.]*	dir/env_foo
 env[-_.]*	env-foo
 env[-_.]*	env.foo
 env[-_.]*	env_foo
+env[-_.]*	subdir/env-foo
+env[-_.]*	subdir/env-foo/foo
+env[-_.]*	subdir/env.foo
+env[-_.]*	subdir/env.foo/foo
+env[-_.]*	subdir/env_foo
+env[-_.]*	subdir/env_foo/foo

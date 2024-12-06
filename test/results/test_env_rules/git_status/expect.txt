@@ -17,6 +17,9 @@ Changes to be committed:
 	new file:   env-example
 	new file:   env.example
 	new file:   env_example
+	new file:   subdir/env-example/foo
+	new file:   subdir/env.example/foo
+	new file:   subdir/env_example/foo
 
 Ignored files:
   (use "git add -f <file>..." to include in what will be committed)
@@ -36,4 +39,8 @@ Ignored files:
 	env-foo
 	env.foo
 	env_foo
+	subdir/env-foo/
+	subdir/env.foo/
+	subdir/env/
+	subdir/env_foo/
 
