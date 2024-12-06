@@ -7,16 +7,19 @@
 # https://github.com/SixArm/gitignore/gitgnore
 #
 # These rules can be adjusted as you wish for your projects.
+#
 # We welcome constructive feedback, suggestions, questions, etc.
 ##
 
 ##
-# Dot files and paths
+# Dot files and dot paths
 ##
 
 # First reject dot path files, which are conventionally intended
 # to be hidden files, or local only, or unversioned data, etc.
 # Later on, you will override this rule to accept specific paths.
+#
+# Examples:
 #
 #     .foo
 #     .foo-bar
@@ -24,13 +27,22 @@
 
 .*
 
-# Accept git-specific files that are conventionally versioned,
-# such as .gitignore files, .keep files that mark directories, etc.
+# Accept git-specific files that are conventionally versioned.
+#
+# Examples:
 #
 #     .gitignore
+#     .foo.gitignore
 
 !.gitignore
 !.*.gitignore
+
+# Accept keep files, which mark directories to be versioned.
+#
+# Examples:
+#
+#     .keep
+#     .foo.keep
 
 !.keep
 !.*.keep
@@ -38,25 +50,43 @@
 # Accept dot paths that are considered example paths.
 # These paths are for placeholders, samples, etc., such as:
 #
+# Examples:
+#
+#     .example
+#     .example.foo
+#     .example-foo
+#     .example_foo
 #     .foo.example
 #     .foo-example
 #     .foo_example
+#     .foo.example.bar
+#     .foo-example-bar
+#     .foo_example_bar
+
+!.example
+!.examples
+
+!.example[-_.]*
+!.examples[-_.]*
 
 !.*[-_.]example
+!.*[-_.]examples
+
 !.*[-_.]example[-_.]*
+!.*[-_.]examples[-_.]*
 
 # Accept dot paths that are considered encrypted paths.
 # These paths are for secrets, confidential data, etc.
 #
-#     foo.argon2
-#     foo.aes
-#     foo.gpg
-#     foo.pgp
+#     .foo.argon2
+#     .foo.aes
+#     .foo.gpg
+#     .foo.pgp
 
-!.*.argon2
-!.*.aes
-!.*.gpg
-!.*.pgp
+!.*[-_.]argon2
+!.*[-_.]aes
+!.*[-_.]gpg
+!.*[-_.]pgp
 
 ##
 # Environment files and paths
@@ -75,28 +105,34 @@ env[-_.]*
 # These paths are for placeholders, samples, etc., such as:
 
 !.env[-_.]example
+!.env[-_.]examples
+
 !.env[-_.]example[-_.]*
+!.env[-_.]examples[-_.]*
 
 !env[-_.]example
+!env[-_.]examples
+
 !env[-_.]example[-_.]*
+!env[-_.]examples[-_.]*
 
 # Accept env paths that are considered encrypted paths.
 # These paths are for secrets, confidential data, etc.
 
-!.env[-_.]argon2
-!.env[-_.]aes
-!.env[-_.]gpg
-!.env[-_.]pgp
+!.env.argon2
+!.env.aes
+!.env.gpg
+!.env.pgp
 
 !.env[-_.]*.argon2
 !.env[-_.]*.aes
 !.env[-_.]*.gpg
 !.env[-_.]*.pgp
 
-!env[-_.]argon2
-!env[-_.]aes
-!env[-_.]gpg
-!env[-_.]pgp
+!env.argon2
+!env.aes
+!env.gpg
+!env.pgp
 
 !env[-_.]*.argon2
 !env[-_.]*.aes
@@ -104,16 +140,49 @@ env[-_.]*
 !env[-_.]*.pgp
 
 ##
-# Artifact directories
-#
-# Ignore artifact directories, a.k.a. temporary file folders,
-# using typical naming conventions from many technologies.
+# Artifacts that are typically omitted from version control
 ##
 
-/**/build
-/**/cache
-/**/log
-/**/target
-/**/tmp
-/**/temp
-/**/vendor
+# Ignore backup directories and files.
+
+**/backup
+**/backups
+
+*[-_.]*backup
+*[-_.]*backups
+
+backup[-_.]**
+backups[-_.]**
+
+# Ignore temporary directories and files.
+
+**/tmp
+**/temp
+
+*[-_.]*tmp
+*[-_.]*temp
+
+tmp[-_.]**
+temp[-_.]**
+
+# Ignore log directories and files.
+
+**/log
+**/logs
+
+*[-_.]*log
+*[-_.]*logs
+
+log[-_.]**
+logs[-_.]**
+
+# Ignore cache directories and files.
+
+**/cache
+**/caches
+
+*[-_.]*cache
+*[-_.]*caches
+
+cache[-_.]**
+caches[-_.]**

@@ -1,0 +1,4 @@
+.*	.foo-keep
+.*	.foo_keep
+.*	dir/.foo-keep
+.*	dir/.foo_keep

@@ -1,0 +1,16 @@
+.env	.env
+.env	dir/.env
+.env[-_.]*	.env-foo
+.env[-_.]*	.env.foo
+.env[-_.]*	.env_foo
+.env[-_.]*	dir/.env-foo
+.env[-_.]*	dir/.env.foo
+.env[-_.]*	dir/.env_foo
+env	dir/env
+env	env
+env[-_.]*	dir/env-foo
+env[-_.]*	dir/env.foo
+env[-_.]*	dir/env_foo
+env[-_.]*	env-foo
+env[-_.]*	env.foo
+env[-_.]*	env_foo
