@@ -145,8 +145,8 @@ env[-_.]*
 
 # Ignore backup directories and files.
 
-**/backup
-**/backups
+backup
+backups
 
 *[-_.]*backup
 *[-_.]*backups
@@ -156,8 +156,8 @@ backups[-_.]**
 
 # Ignore temporary directories and files.
 
-**/tmp
-**/temp
+tmp
+temp
 
 *[-_.]*tmp
 *[-_.]*temp
@@ -167,8 +167,8 @@ temp[-_.]**
 
 # Ignore log directories and files.
 
-**/log
-**/logs
+log
+logs
 
 *[-_.]*log
 *[-_.]*logs
@@ -178,8 +178,8 @@ logs[-_.]**
 
 # Ignore cache directories and files.
 
-**/cache
-**/caches
+cache
+caches
 
 *[-_.]*cache
 *[-_.]*caches

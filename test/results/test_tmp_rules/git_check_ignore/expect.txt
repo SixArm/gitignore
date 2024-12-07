@@ -1,11 +1,3 @@
-**/temp	dir/temp
-**/temp	subdir/temp
-**/temp	subdir/temp/foo
-**/temp	temp
-**/tmp	dir/tmp
-**/tmp	subdir/tmp
-**/tmp	subdir/tmp/foo
-**/tmp	tmp
 *[-_.]*temp	.foo-temp
 *[-_.]*temp	.foo.temp
 *[-_.]*temp	.foo_temp
@@ -58,6 +50,10 @@
 .*	dir/.tmp-foo
 .*	dir/.tmp.foo
 .*	dir/.tmp_foo
+temp	dir/temp
+temp	subdir/temp
+temp	subdir/temp/foo
+temp	temp
 temp[-_.]**	dir/temp-foo
 temp[-_.]**	dir/temp.foo
 temp[-_.]**	dir/temp_foo
@@ -70,6 +66,10 @@ temp[-_.]**	subdir/temp_foo/foo
 temp[-_.]**	temp-foo
 temp[-_.]**	temp.foo
 temp[-_.]**	temp_foo
+tmp	dir/tmp
+tmp	subdir/tmp
+tmp	subdir/tmp/foo
+tmp	tmp
 tmp[-_.]**	dir/tmp-foo
 tmp[-_.]**	dir/tmp.foo
 tmp[-_.]**	dir/tmp_foo

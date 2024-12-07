@@ -1,11 +1,3 @@
-**/cache	cache
-**/cache	dir/cache
-**/cache	subdir/cache
-**/cache	subdir/cache/foo
-**/caches	caches
-**/caches	dir/caches
-**/caches	subdir/caches
-**/caches	subdir/caches/foo
 *[-_.]*cache	.cache
 *[-_.]*cache	.foo-cache
 *[-_.]*cache	.foo.cache
@@ -58,6 +50,10 @@
 .*	dir/.caches-foo
 .*	dir/.caches.foo
 .*	dir/.caches_foo
+cache	cache
+cache	dir/cache
+cache	subdir/cache
+cache	subdir/cache/foo
 cache[-_.]**	cache-foo
 cache[-_.]**	cache.foo
 cache[-_.]**	cache_foo
@@ -70,6 +66,10 @@ cache[-_.]**	subdir/cache.foo
 cache[-_.]**	subdir/cache.foo/foo
 cache[-_.]**	subdir/cache_foo
 cache[-_.]**	subdir/cache_foo/foo
+caches	caches
+caches	dir/caches
+caches	subdir/caches
+caches	subdir/caches/foo
 caches[-_.]**	caches-foo
 caches[-_.]**	caches.foo
 caches[-_.]**	caches_foo

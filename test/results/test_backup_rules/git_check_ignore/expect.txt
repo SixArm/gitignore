@@ -1,11 +1,3 @@
-**/backup	backup
-**/backup	dir/backup
-**/backup	subdir/backup
-**/backup	subdir/backup/foo
-**/backups	backups
-**/backups	dir/backups
-**/backups	subdir/backups
-**/backups	subdir/backups/foo
 *[-_.]*backup	.backup
 *[-_.]*backup	.foo-backup
 *[-_.]*backup	.foo.backup
@@ -58,6 +50,10 @@
 .*	dir/.backups-foo
 .*	dir/.backups.foo
 .*	dir/.backups_foo
+backup	backup
+backup	dir/backup
+backup	subdir/backup
+backup	subdir/backup/foo
 backup[-_.]**	backup-foo
 backup[-_.]**	backup.foo
 backup[-_.]**	backup_foo
@@ -70,6 +66,10 @@ backup[-_.]**	subdir/backup.foo
 backup[-_.]**	subdir/backup.foo/foo
 backup[-_.]**	subdir/backup_foo
 backup[-_.]**	subdir/backup_foo/foo
+backups	backups
+backups	dir/backups
+backups	subdir/backups
+backups	subdir/backups/foo
 backups[-_.]**	backups-foo
 backups[-_.]**	backups.foo
 backups[-_.]**	backups_foo
