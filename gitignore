@@ -101,6 +101,12 @@
 env
 env[-_.]*
 
+.envs
+.envs[-_.]*
+
+envs
+envs[-_.]*
+
 # Accept env paths that are considered example paths.
 # These paths are for placeholders, samples, etc., such as:
 
