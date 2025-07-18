@@ -31,9 +31,9 @@ test_gitignore_rules() {
     mkdir dir
     for x in \
         gitignore \
+        foo_gitignore \
         foo.gitignore \
-        foo-gitignore \
-        foo_gitignore
+        foo-gitignore
     do
         touch ".$x"
         touch "$x"
@@ -48,9 +48,9 @@ test_dot_rules() {
     mkdir dir
     for x in \
         foo \
+        foo_bar \
         foo.bar \
-        foo-bar \
-        foo_bar
+        foo-bar
     do
         touch ".$x"
         touch "$x"
@@ -65,9 +65,9 @@ test_keep_rules() {
     mkdir dir
     for x in \
         keep \
-        foo.keep \
+        foo_keep \
         foo-keep \
-        foo_keep
+        foo.keep
     do
         touch ".$x"
         touch "$x"
@@ -83,12 +83,12 @@ test_env_rules() {
     mkdir subdir
     for x in \
         env \
-        env.example \
-        env-example \
         env_example \
-        env.foo \
+        env-example \
+        env.example \
+        env_foo \
         env-foo \
-        env_foo
+        env.foo
     do
         touch ".$x"
         touch "$x"
@@ -98,6 +98,26 @@ test_env_rules() {
         touch "subdir/$x/foo"
     done
     assert "test_env_rules"
+}
+
+test_encryption_rules() {
+    setup
+    mkdir dir
+    for x in \
+        foo.aes \
+        foo.age \
+        foo.argon2 \
+        foo.bcrypt \
+        foo.gpg \
+        foo.pgp \
+        foo.scrypt
+    do
+        touch ".$x"
+        touch "$x"
+        touch "dir/.$x"
+        touch "dir/$x"
+    done
+    assert "test_encryption_rules"
 }
 
 test_example_rules() {
@@ -260,6 +280,7 @@ test_gitignore_rules
 test_dot_rules
 test_keep_rules
 test_env_rules
+test_encryption_rules
 test_example_rules
 test_backup_rules
 test_tmp_rules

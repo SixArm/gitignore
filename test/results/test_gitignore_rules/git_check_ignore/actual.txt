@@ -1,4 +1,4 @@
-.*	.foo-gitignore
 .*	.foo_gitignore
-.*	dir/.foo-gitignore
+.*	.foo-gitignore
 .*	dir/.foo_gitignore
+.*	dir/.foo-gitignore

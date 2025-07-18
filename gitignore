@@ -78,15 +78,21 @@
 # Accept dot paths that are considered encrypted paths.
 # These paths are for secrets, confidential data, etc.
 #
-#     .foo.argon2
 #     .foo.aes
+#     .foo.age
+#     .foo.argon2
+#     .foo.bcrypt
 #     .foo.gpg
 #     .foo.pgp
+#     .foo.scrypt
 
-!.*[-_.]argon2
 !.*[-_.]aes
+!.*[-_.]age
+!.*[-_.]argon2
+!.*[-_.]bcrypt
 !.*[-_.]gpg
 !.*[-_.]pgp
+!.*[-_.]scrypt
 
 ##
 # Environment files and paths
@@ -125,25 +131,37 @@ envs[-_.]*
 # Accept env paths that are considered encrypted paths.
 # These paths are for secrets, confidential data, etc.
 
-!.env.argon2
 !.env.aes
+!.env.age
+!.env.argon2
+!.env.bcrypt
 !.env.gpg
 !.env.pgp
+!.env.scrypt
 
-!.env[-_.]*.argon2
 !.env[-_.]*.aes
+!.env[-_.]*.age
+!.env[-_.]*.argon2
+!.env[-_.]*.bcrypt
 !.env[-_.]*.gpg
 !.env[-_.]*.pgp
+!.env[-_.]*.scrypt
 
-!env.argon2
 !env.aes
+!env.age
+!env.argon2
+!env.bcrypt
 !env.gpg
 !env.pgp
+!env.scrypt
 
-!env[-_.]*.argon2
 !env[-_.]*.aes
+!env[-_.]*.age
+!env[-_.]*.argon2
+!env[-_.]*.bcrypt
 !env[-_.]*.gpg
 !env[-_.]*.pgp
+!env[-_.]*.scrypt
 
 ##
 # Artifacts that are typically omitted from version control

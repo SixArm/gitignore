@@ -7,7 +7,6 @@ cd test
 ./test.sh
 ```
 
-
 ## How it works
 
 Steps:
@@ -18,16 +17,14 @@ Steps:
 
 3. The script calculates various outputs by using `diff $actual $expect`.
 
-
 ## Commands
 
 The outputs are essentially based on these two commands:
 
 ```sh
 git check-ignore -v
-git status --ignored 
+git status --ignored
 ```
-
 
 ## Example directory structure
 
