@@ -22,8 +22,7 @@
 # Examples:
 #
 #     .foo
-#     .foo-bar
-#     .foo_bar
+#     .foo.bar
 
 .*
 
@@ -35,7 +34,7 @@
 #     .foo.gitignore
 
 !.gitignore
-!.*.gitignore
+!.*[-_.]*gitignore
 
 # Accept keep files, which mark directories to be versioned.
 #
@@ -45,7 +44,7 @@
 #     .foo.keep
 
 !.keep
-!.*.keep
+!.*[-_.]*keep
 
 # Accept dot paths that are considered example paths.
 # These paths are for placeholders, samples, etc., such as:
@@ -54,14 +53,7 @@
 #
 #     .example
 #     .example.foo
-#     .example-foo
-#     .example_foo
-#     .foo.example
-#     .foo-example
-#     .foo_example
 #     .foo.example.bar
-#     .foo-example-bar
-#     .foo_example_bar
 
 !.example
 !.examples
@@ -100,21 +92,40 @@
 
 # First reject environment paths, which are conventionally intended
 # to be configuration variables, or local only, or for secrets, etc.
+#
+#
+# Examples:
+#
+#     .env
+#     .env.foo
+#     .envs
+#     .envs.foo
+#     env
+#     env.foo
+#     envs
+#     envs.foo
 
 .env
 .env[-_.]*
 
-env
-env[-_.]*
-
 .envs
 .envs[-_.]*
+
+env
+env[-_.]*
 
 envs
 envs[-_.]*
 
 # Accept env paths that are considered example paths.
 # These paths are for placeholders, samples, etc., such as:
+#
+# Examples:
+#
+#     .env.example
+#     .env.examples
+#     .env.example.foo
+#     .env.examples.foo   
 
 !.env[-_.]example
 !.env[-_.]examples
@@ -130,6 +141,13 @@ envs[-_.]*
 
 # Accept env paths that are considered encrypted paths.
 # These paths are for secrets, confidential data, etc.
+#
+# Examples:
+#
+#     .env.age
+#     .env.foo.age
+#     env.age
+#     env.foo.age
 
 !.env.aes
 !.env.age
@@ -168,6 +186,15 @@ envs[-_.]*
 ##
 
 # Ignore backup directories and files.
+#
+# Examples:
+#
+#     backup
+#     backups
+#     backup.foo
+#     backups.foo
+#     foo.backup
+#     foo.backups
 
 backup
 backups
@@ -179,6 +206,15 @@ backup[-_.]**
 backups[-_.]**
 
 # Ignore temporary directories and files.
+#
+# Examples:
+#
+#     tmp
+#     temp
+#     tmp.foo
+#     temp.foo
+#     foo.tmp
+#     foo.temp
 
 tmp
 temp
@@ -190,7 +226,15 @@ tmp[-_.]**
 temp[-_.]**
 
 # Ignore log directories and files.
-
+#
+# Examples:
+#
+#     log
+#     logs
+#     log.foo
+#     logs.foo
+#     foo.log
+#     foo.logs
 log
 logs
 
@@ -201,6 +245,15 @@ log[-_.]**
 logs[-_.]**
 
 # Ignore cache directories and files.
+#
+# Examples:
+#
+#     cache
+#     caches
+#     cache.foo
+#     caches.foo
+#     foo.cache
+#     foo.caches
 
 cache
 caches
